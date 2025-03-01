@@ -1,0 +1,269 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+.voice-video-container {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    max-width: 1500px;
+    margin: auto;
+    background-image: url('https://kara-coconut.com/wp-content/uploads/2020/02/Recipe_Main_Banner.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    /* Ensures text is visible over the background */
+}
+
+/* Navbar Styling */
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #436ea6;
+    padding: 15px 20px;
+    color: white;
+}
+
+.home-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navbar Links */
+.home-header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.home-header nav ul li {
+    display: inline-block;
+}
+
+.home-header nav ul li button,
+.home-header nav ul li a {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: background-color 0.3s;
+}
+
+.home-header nav ul li button:hover,
+.home-header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Search Bar */
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    /* Semi-transparent background */
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: bottom;
+
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}
+
+/* Voice Search Section */
+.btn-voice {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-voice:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+ul {
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+li {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Video Cooking Assistant Section */
+.video-cooking-container {
+    text-align: center;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.btn-camera {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-camera:hover {
+    background-color: #218838;
+}
+
+/* Step Guide */
+.step-guide {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+.step-guide h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.step-guide p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Profile Section */
+.profile {
+    margin-left: auto;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+/* Feature Card Images */
+.feature-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.feature-card h2 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+/* Video Cooking Section */
+.video-cooking-container {
+    margin-bottom: 30px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar li a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure Navbar is visible over the background */
+.home-header {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black background */
+    color: #fff;
+    padding: 8px 16px;
+    text-align: center;
+}
+
+.home-header h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.home-header nav ul li button,
+.home-header nav ul li a {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: background-color 0.3s;
+}
+
+.home-header nav ul li button:hover,
+.home-header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
