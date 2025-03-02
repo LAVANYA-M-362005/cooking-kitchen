@@ -1,11 +1,10 @@
-/* App.css */
 .App {
   text-align: center;
 }
 
 .App-header {
   background-color: white;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,13 +14,23 @@
 }
 
 .App-logo {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   pointer-events: none;
+  border-radius: 100%;
+
+
+
 }
 
 .start-container {
   margin-top: 20px;
+  border-radius: 50px;
+
+}
+
+.start-container.hover {
+  background-color: rgb(157, 97, 62);
 }
 
 .App-link {
@@ -30,11 +39,24 @@
   color: black;
   background-color: #61dafb;
   border: none;
-  border-radius: 5px;
+
+
   cursor: pointer;
   text-decoration: none;
 }
 
 .App-link:hover {
   background-color: #21a1f1;
+}
+
+.initial {
+  background-color: #d7dde1;
+  border-radius: 50px;
+  border: width 800px;
+  box-shadow: #f0f4f5;
+  width: 100%;
+  text-align: center;
+
+
+
 }
