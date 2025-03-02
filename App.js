@@ -37,12 +37,13 @@ function App() {
               }}
             />
           </div>
-
+         <div className="initial" style={{ position: 'relative', display: 'inline-block' }}>
           <p>Welcome to the world of cook</p>
           <div className="start-container">
             <button className="App-link" onClick={handleStartClick}>
               Start
             </button>
+            </div>
           </div>
         </header>
       )}
