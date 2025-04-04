@@ -1,25 +1,27 @@
+/* ✅ General Styling */
+/* General Styles */
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: whitesmoke;
     margin: 0;
     padding: 0;
+    background-color: whitesmoke;
+    box-sizing: border-box;
 }
 
+/* Background and Container */
 .voice-video-container {
-    font-family: 'Roboto', sans-serif;
-    padding: 20px;
-    max-width: 1500px;
-    margin: auto;
+    margin: 0;
+    padding: 0;
     background-image: url('https://kara-coconut.com/wp-content/uploads/2020/02/Recipe_Main_Banner.jpg');
     background-size: cover;
-    background-position: center;
-    min-height: 800px;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    color: #fff;
-    /* Ensures text is visible over the background */
+    padding-top: 80px;
 }
 
 /* Navbar Styling */
@@ -27,123 +29,174 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #436ea6;
     padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
+    border-radius: 30px;
+    margin: 10px;
+    height: 60px;
 }
 
-.home-header h1 {
-    margin: 0;
-    font-size: 24px;
+.main-image-container {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
 }
 
-/* Navbar Links */
+/* Main Image Styling */
+.main-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+
+
+
+/* Ensure Navbar Items are Always Visible */
 .home-header nav ul {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    list-style-type: none;
+    gap: 50px;
+    list-style: none;
     padding: 0;
-}
-
-.home-header nav ul li {
-    display: inline-block;
+    margin: 0;
+    visibility: visible;
+    /* Ensure items are always visible */
+    opacity: 1;
+    /* Make items fully opaque */
+    transition: none;
+    /* Remove hover transition */
 }
 
 .home-header nav ul li button,
 .home-header nav ul li a {
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: #8d8585;
     font-size: 16px;
     cursor: pointer;
     padding: 6px 12px;
-    transition: background-color 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    /* Make sure elements are block-level to avoid hidden behavior */
 }
 
+/* Optional: Keep hover effect only for styling */
 .home-header nav ul li button:hover,
 .home-header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: lightblue;
 }
 
-/* Search Bar */
-.search-bar input {
-    padding: 10px;
-    font-size: 16px;
-    width: 300px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
 
-    /* Semi-transparent background */
-}
 
-.search-bar button {
-    padding: 10px;
-    background-color: #4CAF50;
+/* Home Button at Top-Left Corner */
+.btn-home {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    align-items: bottom;
-
+    z-index: 10;
 }
+
+.btn-home:hover {
+    background-color: #0056b3;
+}
+
+.interactive-cooking-div {
+    background: rgba(211, 233, 245, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+input[type='text'] {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-right: 10px;
+}
+
+.search-btn,
+.voice-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
 
 .search-bar button:hover {
     background-color: #45a049;
 }
 
-/* Voice Search Section */
+/* Voice Search Button */
 .btn-voice {
-    padding: 12px 20px;
-    background-color: #007bff;
+    padding: 12px 10px;
+    background-color: #bac9d7;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-left: 15px;
 }
 
 .btn-voice:hover {
-    background-color: #0056b3;
-}
-
-h2 {
-    margin-top: 20px;
-}
-
-ul {
-    margin-top: 10px;
-    list-style-type: none;
-}
-
-li {
-    font-size: 16px;
-    color: #555;
+    background-color: #b1c6dc;
 }
 
 /* Video Cooking Assistant Section */
-.video-cooking-container {
-    text-align: center;
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.video-container video {
+video {
     width: 100%;
     max-width: 500px;
-    border-radius: 8px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
 }
 
 .btn-camera {
-    padding: 12px 20px;
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .btn-camera:hover {
@@ -174,96 +227,138 @@ li {
 }
 
 /* Feature Cards */
+.feature-cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevents wrapping to the next line */
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
 .feature-card {
     background: white;
-    margin: 20px auto;
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+    margin: 20px 0;
+    /* Removed horizontal margin to avoid overflow */
     padding: 20px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    height: 200px;
+}
+
+.feature-card img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.feature-card h2 {
+    color: #333;
+    margin-top: 10px;
+}
+
+.feature-card p {
+    color: #666;
+    margin: 10px 0;
+}
+
+.feature-card button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feature-card button:hover {
+    background-color: #218838;
 }
 
 .feature-card:hover {
     transform: scale(1.05);
 }
 
-/* Feature Card Images */
-.feature-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.feature-card h2 {
-    color: #333;
-    margin: 10px 0;
-}
-
-.feature-card p {
-    color: #666;
-}
-
-/* Video Cooking Section */
-.video-cooking-container {
-    margin-bottom: 30px;
-}
-
-/* Navbar */
-.navbar {
-    background-color: #333;
-    padding: 20px;
+/* Footer */
+.footer {
+    background-color: grey;
     color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
 }
 
-.navbar ul {
-    display: flex;
-    list-style: none;
+h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.navbar li {
-    margin-right: 20px;
+li {
+    background: #f8f9fa;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
 }
 
-.navbar li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
 
-.navbar li a:hover {
-    text-decoration: underline;
-}
-
-/* Ensure Navbar is visible over the background */
-.home-header {
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Semi-transparent black background */
-    color: #fff;
-    padding: 8px 16px;
+/* Animation for Welcome Text */
+.wavy-overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(72, 136, 157);
     text-align: center;
+    z-index: 5;
+    text-shadow: 2px 2px 4px rgba(193, 180, 180, 0.5);
 }
 
-.home-header h1 {
-    font-size: 24px;
-    margin-bottom: 8px;
+/* Animated Welcome Text */
+.welcome-text {
+    position: absolute;
+    top: 35%;
+    left: -100%;
+    font-size: 3rem;
+    color: rgb(59, 56, 56);
+    font-weight: bold;
+    animation: slideIn 2s forwards;
+    z-index: 10;
+    /* Ensure it is above the image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
 }
 
-.home-header nav ul li button,
-.home-header nav ul li a {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 6px 12px;
-    transition: background-color 0.3s;
-}
+/* Keyframes for Slide-in Animation */
+@keyframes slideIn {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
 
-.home-header nav ul li button:hover,
-.home-header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    50% {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
 }
