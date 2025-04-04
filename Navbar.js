@@ -1,3 +1,4 @@
+// Navbar.js
 import React from 'react';
 import { FaUtensils, FaShoppingCart, FaClipboardList, FaUserCircle } from 'react-icons/fa';
 import './home.css';
@@ -10,8 +11,9 @@ const Navbar = ({ setPage }) => {
                 <ul>
                     {/* Link to Interactive Cooking */}
                     <li><button onClick={() => setPage('cooking')}><FaUtensils /> Interactive Cooking</button></li>
-                    <li><a href="#ingredients"><FaShoppingCart /> Ingredient Booking</a></li>
-                    <li><a href="#management"><FaClipboardList /> Smart Ingredient Management</a></li>
+                    <li><button onClick={() => setPage('ingredients')}><FaUtensils /> Ingredients booking</button></li>
+                    <li><button onClick={() => setPage('management')}><FaUtensils /> Ingredient management</button></li>
+
                     <li className="profile"><a href="#profile"><FaUserCircle /> Profile</a></li>
                 </ul>
             </nav>
